@@ -1,2 +1,7 @@
 # RealEstate
- Ceci est une solution web, dans un cadre académique, ayant pour but de permettre la mise en avant de bien immobilier. D’aider différentes agences à la vente/location de leurs produits immobiliers
+Technologies utilisées : 
+- PostgreSQL
+- ASP.NET Web
+- Bootstrap
+
+Nécessite de changer le ConnectionString dans "AppSetting.json" et la création de la base de donnée "RealEstate" (pouvant être fait avec EF core Migration)
