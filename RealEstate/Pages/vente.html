@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>crud dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!----css3---->
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <!--google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+    <!--google material icon-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+    <div class="wrapper">
+
+        <div class="body-overlay"></div>
+
+        <!-------sidebar--design------------>
+<div id="sidebar">
+    <div class="sidebar-header">
+        <h3><img src="img/icon-deal.png" class="img-fluid" /><span>Real-Estate</span></h3>
+    </div>
+    <ul class="list-unstyled component m-0">
+        <li class="active">
+            <a href="userDetails.html" class="dashboard"><i class="material-icons"></i>Dashboard </a>
+        </li>
+
+        <li class="dropdown">
+            <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="material-icons">aspect_ratio</i>Proprietés
+            </a>
+            <ul class="collapse list-unstyled menu" id="homeSubmenu1">
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Vente</a></li>
+            </ul>
+        </li>
+
+
+        <li>
+            <a href="#">
+                <i class="material-icons">recent_actors</i>Locataires
+            </a>
+        </li>
+
+        <li class="">
+            <a href="agents.html" class=""><i class="material-icons">face</i>Agents </a>
+        </li>
+        <li class="">
+            <a href="rdv.html" class=""><i class="material-icons">date_range</i>Rendez-vous</a>
+        </li>
+        <li class="">
+            <a href="utilisateurs.html" class=""><i class="material-icons">group</i>Utilisateurs</a>
+        </li>
+
+    </ul>
+</div>
+
+
+        <!-------sidebar--design- close----------->
+
+
+
+        <!-------page-content start----------->
+
+        <div id="content">
+
+            <!------top-navbar-start----------->
+
+            <div class="top-navbar">
+                <div class="xd-topbar">
+                    <div class="row">
+                        <div class="col-2 col-md-1 col-lg-1 order-2 order-md-1 align-self-center">
+                            <div class="xp-menubar">
+                                <span class="material-icons text-white">signal_cellular_alt</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 col-lg-3 order-3 order-md-2">
+                            <div class="xp-searchbar">
+                                <form>
+                                    <div class="input-group">
+                                        <input type="search" class="form-control" placeholder="Search">
+                                        <div class="input-group-append">
+                                            <button class="btn" type="submit" id="button-addon2">Go
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <div class="col-10 col-md-6 col-lg-8 order-1 order-md-3">
+                            <div class="xp-profilebar text-right">
+                                <nav class="navbar p-0">
+                                    <ul class="nav navbar-nav flex-row ml-auto">
+                                        <li class="dropdown nav-item active">
+                                            <a class="nav-link" href="#" data-toggle="dropdown">
+                                                <span class="material-icons">notifications</span>
+                                                <span class="notification">4</span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">You Have 4 New Messages</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">
+                                                <span class="material-icons">question_answer</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="dropdown nav-item">
+                                            <a class="nav-link" href="#" data-toggle="dropdown">
+                                                <img src="img/user.jpg" style="width:40px; border-radius:50%;" />
+                                                <span class="xp-user-live"></span>
+                                            </a>
+                                            <ul class="dropdown-menu small-menu">
+                                                <li><a href="#">
+                                                        <span class="material-icons">person_outline</span>
+                                                        Profile
+                                                    </a></li>
+                                                <li><a href="#">
+                                                        <span class="material-icons">settings</span>
+                                                        Settings
+                                                    </a></li>
+                                                <li><a href="#">
+                                                        <span class="material-icons">logout</span>
+                                                        Logout
+                                                    </a></li>
+
+                                            </ul>
+                                        </li>
+
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="xp-breadcrumbbar text-center">
+                        <h4 class="page-title">Dashboard</h4>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Real-Estate</a></li>
+                            <li class="breadcrumb-item active" aria-curent="page">User Details</li>
+                        </ol>
+                    </div>
+
+
+                </div>
+            </div>
+            <!------top-navbar-end----------->
+
+
+            <!------main-content-start----------->
+
+            <div class="main-content" style="background-color: white;
+            margin-top: 25px;">
+                <div class="mot" style="margin-bottom: 50px;">
+                    <h2>Proprietés Pour Vente</h2>
+                    <small>Remplissez toutes les infos Necessaire</small>
+
+                </div>
+
+                <div class="form">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputName" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="inputName">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputPicture1" class="form-label">photo 1</label>
+                            <input type="file" class="form-control" id="inputPicture1">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputPicture2" class="form-label">photo 2</label>
+                            <input type="file" class="form-control" id="inputPicture2">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputPicture3" class="form-label">photo 3</label>
+                            <input type="file" class="form-control" id="inputPictur3">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddresse" class="form-label">Addresse</label>
+                            <input type="text" class="form-control" id="inputAddresse">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPrix" class="form-label">Prix</label>
+                            <input type="number" class="form-control" id="inputPrix" placeholder="125000 fcfa">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputType" class="form-label">Type</label>
+                            <select id="inputType" class="form-select">
+                                <option selected>Choix...</option>
+                                <option>Maison</option>
+                                <option>Appartement</option>
+                                <option>Garage</option>
+                                <option>Villa</option>
+                                <option>Immeuble</option>
+                                <option>Boutique</option>
+                            </select>
+
+                        </div>
+                        <div class="col-12">
+                            <label for="inputDate" class="form-label">Superficie</label>
+                            <input type="text" class="form-control" id="inputDate" placeholder="ex. 12000m²">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputcham" class="form-label">chambres</label>
+                            <input type="number" class="form-control" id="inputcham" placeholder="ex. 1">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="salldeb" class="form-label">Salle de Bain</label>
+                            <input type="number" class="form-control" id="salledeb" placeholder="ex. 1">
+                        </div>
+
+
+
+                        <div class="col-12" style="margin-top: 12px; margin-bottom: 12px;">
+                            <button type="submit" class="btn "
+                                style="background-color: rgb(93, 115, 216); color: white;">Ajouter</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+
+
+
+            <!------main-content-end----------->
+
+
+
+            <!--Table design-->
+            <div class="tables" style="margin-top:10rem; padding:10px">
+
+                <h2>Details Proprietes</h2>
+
+                <table class="table table-striped table-hover">
+                    <thead>
+
+                        <tr>
+
+                            <th>Id</th>
+                            <th>Photo</th>
+                            <th>Nom</th>
+                            <th>Adresse</th>
+                            <th>Prix</th>
+                            <th>Type</th>
+                            <th>Superficie</th>
+                            <th>Qty douches</th>
+                            <th>Qty chambres</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+
+                            <th><img src="./img/user.jpg" alt=""></th>
+                            <th>Thomas Hardy</th>
+                            <th>ThomasHardy@gmail.com</th>
+                            <th>90r parkdground poland Usa.</th>
+
+                            <th>(78-582552-9)</th>
+                            <th>
+                                <a href="#editEmployeeModal" class="edit" data-toggle="modal">
+                                    <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                                </a>
+                                <a href="#SupprimerEmployeeModal" class="Supprimer" data-toggle="modal">
+                                    <i class="material-icons" data-toggle="tooltip" title="Supprimer">&#xE872;</i>
+                                </a>
+                            </th>
+                        </tr>
+
+
+                        <tr>
+
+                            <th>Dominique Perrier</th>
+                            <th>dominiquePerrier@gmail.com</th>
+                            <th>90r ser57, Berlin poland Bermany.</th>
+                            <th>(78-5235-2-9)</th>
+                            <th>
+                                <a href="#editEmployeeModal" class="edit" data-toggle="modal">
+                                    <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                                </a>
+                                <a href="#SupprimerEmployeeModal" class="Supprimer" data-toggle="modal">
+                                    <i class="material-icons" data-toggle="tooltip" title="Supprimer">&#xE872;</i>
+                                </a>
+                            </th>
+                        </tr>
+
+
+                        <tr>
+
+                            <th>Marai Andres</th>
+                            <th>MarariAndres@gmail.com</th>
+                            <th>90r ser57, Berlin poland Bermany.</th>
+
+                            <th>(78-239-669)</th>
+                            <th>
+                                <a href="#edit" class="edit" data-toggle="modal">
+                                    <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                                </a>
+                                <a href="#SupprimerEmployeeModal" class="Supprimer" data-toggle="modal">
+                                    <i class="material-icons" data-toggle="tooltip" title="Supprimer">&#xE872;</i>
+                                </a>
+                            </th>
+                        </tr>
+
+                        <tr>
+
+                            <th>Real-Estate</th>
+                            <th>vishwebdesign@gmail.com</th>
+                            <th> B-2 ser57 Nodia East Delhi,India.</th>
+                            <th>(78-239-669)</th>
+                            <th>
+                                <a href="#editEmployeeModal" class="edit" data-toggle="modal">
+                                    <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                                </a>
+                                <a href="#SupprimerEmployeeModal" class="Supprimer" data-toggle="modal">
+                                    <i class="material-icons" data-toggle="tooltip" title="Supprimer">&#xE872;</i>
+                                </a>
+                            </th>
+                        </tr>
+
+                        <tr>
+
+                            <th>Vishwajeet Kumar</th>
+                            <th>vishkumar234@gmail.com</th>
+                            <th> B-2 ser57 Nodia East Delhi,India.</th>
+                            <th>(78-555-229)</th>
+                            <th>
+                                <a href="#editEmployeeModal" class="edit" data-toggle="modal">
+                                    <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                                </a>
+                                <a href="#SupprimerEmployeeModal" class="Supprimer" data-toggle="modal">
+                                    <i class="material-icons" data-toggle="tooltip" title="Supprimer">&#xE872;</i>
+                                </a>
+                            </th>
+                        </tr>
+
+                    </tbody>
+
+
+                </table>
+            </div>
+
+            <!--Table design end-->
+
+
+
+            <!----footer-design------------->
+
+            <!-- Footer Start -->
+            <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="container py-5">
+                    <div class="row g-5">
+                        <div class="col-lg-3 col-md-6">
+                            <h5 class="text-white mb-4">Prenez Contact</h5>
+                            <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, Yaoundé, CAMEROUN</p>
+                            <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+237 6936363334</p>
+                            <p class="mb-2"><i class="fa fa-envelope me-3"></i>dtakouessa@gmail.com</p>
+                            <div class="d-flex pt-2">
+                                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light btn-social" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-outline-light btn-social" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h5 class="text-white mb-4">Liens Rapides</h5>
+                            <a class="btn btn-link text-white-50" href="">A-propos</a>
+                            <a class="btn btn-link text-white-50" href="">Nous Contacter</a>
+                            <a class="btn btn-link text-white-50" href="">Nos Servics</a>
+                            <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                            <a class="btn btn-link text-white-50" href="">Termes & Condition</a>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h5 class="text-white mb-4">Photos Galleries</h5>
+                            <div class="row g-2 pt-2">
+                                <div class="col-4">
+                                    <img class="img-fluid rounded bg-light p-1" src="img/property-1.jpg" alt="">
+                                </div>
+                                <div class="col-4">
+                                    <img class="img-fluid rounded bg-light p-1" src="img/property-2.jpg" alt="">
+                                </div>
+                                <div class="col-4">
+                                    <img class="img-fluid rounded bg-light p-1" src="img/property-3.jpg" alt="">
+                                </div>
+                                <div class="col-4">
+                                    <img class="img-fluid rounded bg-light p-1" src="img/property-4.jpg" alt="">
+                                </div>
+                                <div class="col-4">
+                                    <img class="img-fluid rounded bg-light p-1" src="img/property-5.jpg" alt="">
+                                </div>
+                                <div class="col-4">
+                                    <img class="img-fluid rounded bg-light p-1" src="img/property-6.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h5 class="text-white mb-4">Bulletin d'information</h5>
+                            <p>Recevez des mails pour connaitre toutes les nouveautés.</p>
+                            <div class="position-relative mx-auto" style="max-width: 400px;">
+                                <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
+                                    placeholder="Votre e-mail">
+                                <button type="button"
+                                    class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">S'inscrire</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="copyright">
+                        <div class="row">
+                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                &copy; <a class="border-bottom" href="#">Real-Estate</a>, All Right Reserved.
+
+
+                                </a>
+                            </div>
+                            <div class="col-md-6 text-center text-md-end">
+                                <div class="footer-menu">
+                                    <a href="./index.html">Acceuil</a>
+                                    <a href="#">Cookies</a>
+                                    <a href="./about.html">Help</a>
+                                    <a href="">FQAs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-------complete html----------->
+
+
+
+
+
+
+
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".xp-menubar").on('click', function () {
+                $("#sidebar").toggleClass('active');
+                $("#content").toggleClass('active');
+            });
+
+            $('.xp-menubar,.body-overlay').on('click', function () {
+                $("#sidebar,.body-overlay").toggleClass('show-nav');
+            });
+
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>

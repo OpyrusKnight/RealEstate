@@ -1,0 +1,12 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+namespace RealEstate.Pages.Shared
+{
+    public class SuccessPageModel : PageModel
+    {
+        public void OnGet()
+        {
+        }
+    }
+}

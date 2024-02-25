@@ -1,0 +1,198 @@
+﻿@model RealEstate.Pages.Shared.SingleProductModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="singp.css">
+
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Favicon -->
+
+    <link href="~/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="~/css/style.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .nav-bar .navbar-expand-lg {
+            width: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!--Spinner end-->
+    <!-- Navbar Start -->
+    <partial name="NavBar" />
+    <!-- Navbar End -->
+
+    <div class="team py-5" id="content">
+        <div class="container py-xl-5 py-lg-3">
+            <div class="text-center mb-lg-5 mb-4">
+                <div class="single-listing-title">
+                    <h2 data-w-id="252d4b91-2da5-a424-60f0-14254943bb7b"
+                        style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"
+                        class="listing-title">
+                        
+                        @Model.produit.nom
+                    
+                    </h2>
+                </div>
+            </div>
+            <div data-w-id="252d4b91-2da5-a424-60f0-14254943bb81" style="opacity: 1;"
+                class="w-layout-grid listing-images">
+                <a href="#"
+                    data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22media%22%7D%5D"
+                    class="image-light-box-link w-inline-block w-lightbox" aria-label="open lightbox"
+                   aria-haspopup="dialog">
+                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.produit.images[0])"
+                        data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                        alt="" class="left-image"></a>
+                <div class="collection-list-wrapper w-dyn-list w-dyn-items-repeater-ref">
+                    <div role="list" class="grid-quarter w-dyn-items" data-wf-collection="f_more_images_4dr"
+                        data-wf-template-id="wf-template-252d4b91-2da5-a424-60f0-14254943bb85">
+                        @for(int i =1; i < Model.produit.images.Length; i++)
+                        {
+                            <div role="listitem" class="collection-item w-dyn-item w-dyn-repeater-item">
+                                <a href="#"
+                                   data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_more_images_4dr%5B%5D%22%2C%22to%22%3A%22media%22%7D%5D"
+                                   class="w-inline-block w-lightbox" aria-label="open lightbox" aria-haspopup="dialog">
+                                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.produit.images[i])"
+                                         data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_more_images_4dr%5B%5D%22%2C%22to%22%3A%22src%22%7D%5D"
+                                         alt="" class="listing-image-quarter">
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="space">
+
+            </div>
+            <div class="listing-wrapper">
+                <div id="w-node-_252d4b91-2da5-a424-60f0-14254943bb91-1b06bc04"
+                    data-w-id="252d4b91-2da5-a424-60f0-14254943bb91" style="opacity: 1;" class="listing-left">
+                    <div class="property-details">
+                        <div class="badge-card-square" >
+                            <h6 style="color: white; ">2 Beds</h6>
+                        </div>
+                        <div class="badge-card-square"
+                            >
+                            <h6 style="color: white; ">2 Baths</h6>
+                        </div>
+                        <div class="badge-card-square"
+                            >
+                            <h6 style="color: white; ">@Model.produit.prix CFA</h6>
+                        </div>
+
+                    <div class="space-small">
+                    </div>
+
+               <div class="w-richtext">
+                   <h2> Description </h2>
+                            <p> @Html.Raw(Model.produit.description.Replace("\\n", "<br/><br/>")) </p>
+               </div>
+            </div>
+            <div id="w-node-_252d4b91-2da5-a424-60f0-14254943bbcb-1b06bc04" class="listing-right">
+                <div>
+                    <div data-w-id="252d4b91-2da5-a424-60f0-14254943bbd1"
+                        style="padding: 10px 5px 0px;opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"
+                        class="single-listing-card-body">
+                       
+                        
+                            <a href="/Contact" class="btn btn-block btn-outline-primary py-2 agent-pic" data-toggle="modal"
+                                data-target="#registration">
+                                <i class="fa fa-comments"></i>
+                                Contacter
+                                <div></div>
+                            </a>
+                            <a href="/RendezVous" class="btn btn-block btn-outline-primary py-2 agent-pic" data-toggle="modal"
+                                data-target="#registration">
+                                <i class="fa fa-comments"></i>
+                                Prendre Rendez-Vous
+                                <div></div>
+                            </a>
+
+                        <a asp-action="pay" asp-route-id="@Model.produit.id" class="btn btn-block btn-outline-primary py-2 agent-pic" data-toggle="modal"
+                            data-target="#registration" style="">
+                            <i class="fa fa-comments"></i>
+                            payer
+                            <div></div>
+                        </a>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+    <!-- Js files -->
+    <!-- JavaScript -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <!-- Default-JavaScript-File -->
+    <script src="js/bootstrap.js"></script>
+    <!-- Necessary-JavaScript-File-For-Bootstrap -->
+
+    <!-- Footer Start -->
+    <partial name="Footer" />
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/wow/wow.min.js"></script>
+    <script src="~/lib/easing/easing.min.js"></script>
+    <script src="~/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="~/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,301 @@
+﻿@page
+@model RealEstate.Pages.Shared.AboutModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Real Estate </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="~/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="~/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="~/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+        <!-- Navbar Start -->
+        <partial name="NavBar" />
+        <!-- Navbar End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid header bg-white p-0">
+            <div class="row g-0 align-items-center flex-column-reverse flex-md-row"
+                style="margin-left: 20px;margin-right: 20px">
+                <div class="col-md-6 p-5 mt-lg-5">
+                    <h1 class="display-5 animated fadeIn mb-4">Qui Sommes Nous?</h1>
+                    <h5 class="display-5 animated fadeIn mb-4" style=" font-size: 30px; color: rgb(163, 202, 234);">
+                        Explorez et découvrez bien plus qu'un simple site immobilier</h5>
+                    <nav aria-label="breadcrumb animated fadeIn">
+                        <ol class="breadcrumb text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+                            <li class="breadcrumb-item"><a href="#">Services</a></li>
+                            <li class="breadcrumb-item text-body active" aria-current="page">Contact</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-md-6 animated fadeIn">
+                    <img class="img-fluid" src="img/Business Customer access.gif" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+        
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                            <img class="img-fluid w-100" src="~/img/about.jpg">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <h1 class="mb-4">#1 Site numéro 1 où l'excellence rencontre l'habitat</h1>
+                        <p class="mb-4">
+                            Découvrez le summum de l'immobilier sur notre site, le leader incontesté. Des maisons
+                            qui allient qualité, confort et style. Avec transparence, expertise, accessibilité et satisfaction
+                            garantie, nous redéfinissons votre expérience d'achat
+                            de maison. Bienvenue chez vous, où l'excellence est la norme.
+                        </p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Des demeures exceptionnelles</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Expérience utilisateur sans pareille.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Des prix compétitifs</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Service de gestion de loyer</p>
+                        <a class="btn btn-primary py-3 px-5 mt-3" href="./about.html">Plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Call to Action Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="bg-light rounded p-3">
+                    <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                                <img class="img-fluid rounded w-100" src="~/img/pexels-christina-morillo-1181555.jpg"
+                                    alt="">
+                            </div>
+                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="mb-4">
+                                    <h1 class="mb-3">Entrez en Contact avec un de nos agents</h1>
+                                    <p>
+                                        Transformez votre expérience immobilière en une aventure réussie en rencontrant nos
+                                        agents dévoués. Que vous soyez
+                                        acheteur ou vendeur, nos professionnels expérimentés sont prêts à vous guider à chaque
+                                        étape, transformant vos objectifs
+                                        en réalité. Rencontrez un agent aujourd'hui et ouvrez la porte vers une transaction
+                                        immobilière réussie.
+                                    </p>
+                                </div>
+                                <a href="" class="btn btn-primary py-3 px-4 me-2">
+                                    <i class="fa fa-phone-alt me-2"></i>En
+                                    Contacter un
+                                </a>
+                                <a href="" class="btn btn-dark py-3 px-4">
+                                    <i class="fa fa-calendar-alt me-2"></i>Prendre
+                                    Rendez-vous
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Call to Action End -->
+
+
+        <!--explanatory part-->
+        <section class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div style="margin-top: -20px; margin-bottom: -210px;">
+                <h1>Comment ça Fonctionne ?</h1>
+                <p>Suivez ces étapes de Navigation et tout ira pour le mieux</p>
+                <div class="container" style="margin-top: -130px;">
+                    <div class="box wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="boxcontent">
+                            <i class="fa fa-search icon" aria-hidden="true" style="color: #8aace6;"></i>
+                            <h1 class="title">Recherche de Propriétés</h1>
+                            <p class="desc">Explorez notre catalogue de biens immobiliers variés. Trouvez la maison de
+                                vos rêves en
+                                quelques clics.</p>
+                        </div>
+                        <a href="property-list.html"></a>
+                    </div>
+
+                    <div class="box wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="boxcontent">
+                            <i class="fa fa-clipboard icon" style="color: #8aace6;"></i>
+                            <h1 class="title">Enregistrement sur le Site</h1>
+                            <p class="desc">Créez un compte pour accéder à des fonctionnalités exclusives, sauvegarder
+                                vos favoris et
+                                suivre l'évolution de vos recherches.</p>
+                        </div>
+                        <a href="connexion.html"></a>
+                    </div>
+
+                    <div class="box wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="boxcontent">
+                            <i class="fa fa-handshake icon" style="color: #8aace6;"></i>
+                            <h1 class="title">Mise en Relation avec un Agent</h1>
+                            <p class="desc">Trouvez un agent immobilier de confiance pour vous guider à chaque étape de
+                                l'acquisition.
+                            </p>
+                        </div>
+                        <a href="contact.html"></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--end of explanatory part-->
+
+        <!-- Team Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Agents Immobiliers</h1>
+                    <p>Rencontrez un de nos agents dès maintenant et donnez vie à vos projets immobiliers. Que vous
+                        achetiez ou
+                        vendiez, notre
+                        équipe est prête à faire de chaque transaction une expérience réussie.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/team-01.jpg" alt="">
+                                <div
+                                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">Felicia Ngum</h5>
+                                <small>Agent Commerciale</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/team-02.jpg" alt="">
+                                <div
+                                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">Paul Takoum</h5>
+                                <small>CEO</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/team-03.jpg" alt="">
+                                <div
+                                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">Anne-Marie Nkoum </h5>
+                                <small>Agent Immobilier</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="team-item rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/team-04.jpg" alt="">
+                                <div
+                                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">Jean-Pierre Mbeng</h5>
+                                <small>Agent Principal</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+        
+    
+        <!-- Footer Start -->
+        <partial name="Footer" />
+        <!-- Footer End -->
+
+        
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/wow/wow.min.js"></script>
+    <script src="~/lib/easing/easing.min.js"></script>
+    <script src="~/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/js/main.js">
+    </script>
+    <script defer>
+        SetActiveNav("navAbout");
+    </script>
+</body>
+
+</html>

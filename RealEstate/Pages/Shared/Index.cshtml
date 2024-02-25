@@ -1,0 +1,728 @@
+﻿@model RealEstate.Pages.IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>REAL ESTATE COMPANY</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="~/img/favicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="~/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+        <!-- Navbar Start -->
+        <partial name="NavBar" />
+        <!-- Navbar End -->
+     
+
+      <!-- Header Start -->
+        <div class="container-fluid header bg-white p-0">
+            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 p-5 mt-lg-5">
+                    <h1 class="display-5 animated fadeIn mb-4">Les biens Immobiliers de <span class="span" style="color:rgb(107, 145, 203)">Qualité</span> en un seul Clic</h1>
+                    <p class="animated fadeIn mb-4 pb-2">Explorez un monde de possibilités avec notre compagnie dédiée à la vente et à la location de produits immobiliers exceptionnels!</p>
+                    <a asp-action="PropertyList" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">DECOUVRIR !!</a>
+                </div>
+                <div class="col-md-6 animated fadeIn">
+                    <div class="owl-carousel header-carousel" >
+                        <div class="owl-carousel-item" style="margin-top: 70px;">
+                            <img class="img-fluid" src="./img/maisonC.jpeg" alt="">
+                        </div>
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" src="./img/Singing Contract.gif" alt="">
+                        </div>
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" src="./img/Business Customer access.gif" alt="">
+                        </div>
+                        <div class="owl-carousel-item" style="text-align: center; position: relative; color: white;">
+                            <img class="img-fluid" src="./img/Website Building of Shopping Sale.gif" alt="">
+                          
+                        </div>
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" src="./img/User interface research.gif" alt="">
+                        </div>
+                        <div class="owl-carousel-item" style="margin-top: 70px;">
+                            <img class="img-fluid" src="./img/tierra-mallorca-rgJ1J8SDEAY-unsplash.jpg" alt="" >
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Search Start -->
+    <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 5px; border-radius: 2px;  ">
+        <div class="container">
+            <div class="row g-2">
+               
+            </div>
+        </div>
+    </div>
+    <!-- Search End -->
+        <!-- Category Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Types de proprietés</h1>
+                    <p>
+                        Explorez notre site pour une diversité de propriétés exceptionnelles, des demeures familiales chaleureuses aux
+                        appartements urbains élégants, offrant un éventail de choix qui répond à tous les styles de vie et aspirations
+                        immobilières.
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="img/building.png" alt="Icon">
+                                </div>
+                                <h6>Apartement</h6>
+                                <span>100 proprietés</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="img/residence.png" alt="Icon">
+                                </div>
+                                <h6>Villa</h6>
+                                <span>100 proprietés</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="img/home.png" alt="Icon">
+                                </div>
+                                <h6>Maison</h6>
+                                <span>100 proprietés</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="img/office.png" alt="Icon">
+                                </div>
+                                <h6>Bureau</h6>
+                                <span>100 proprietés</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="img/skyscraper.png" alt="Icon">
+                                </div>
+                                <h6>Immeuble</h6>
+                                <span>100 proprietés</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="img/smart-city.png" alt="Icon">
+                                </div>
+                                <h6>maison de ville</h6>
+                                <span>100 proprietés</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="img/store.png" alt="Icon">
+                                </div>
+                                <h6>Boutique</h6>
+                                <span>100 proprietés</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="img/garage.png" alt="Icon">
+                                </div>
+                                <h6>Garage</h6>
+                                <span>100 proprietés</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Category End -->
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                            <img class="img-fluid w-100" src="img/about.jpg">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <h1 class="mb-4">#1 Site numéro 1  où l'excellence rencontre l'habitat</h1>
+                        <p class="mb-4">
+                            Découvrez le summum de l'immobilier sur notre site, le leader incontesté. Des maisons qui allient qualité, confort et style. Avec transparence, expertise, accessibilité et satisfaction garantie, nous redéfinissons votre expérience d'achat
+                            de maison. Bienvenue chez vous, où l'excellence est la norme.
+                        </p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Des demeures exceptionnelles</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Expérience utilisateur sans pareille.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Des prix compétitifs</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Service de gestion de loyer</p>
+                        <a class="btn btn-primary py-3 px-5 mt-3" href="./about.html">Plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <!-- Property List Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-0 gx-5 align-items-end">
+                    <div class="col-lg-6">
+                        <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
+                            <h1 class="mb-3">Listes de Proprietés</h1>
+                            <p>
+                                Explorez notre sélection variée de logements, chacun offrant une expérience unique. Des maisons de ville élégantes aux appartements modernes, découvrez la diversité de nos propriétés avant de choisir celle qui correspond parfaitement à
+                                votre style de vie.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
+                        <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
+                            <li class="nav-item me-2">
+                                <a class="btn btn-outline-primary active" data-bs-toggle="pill" href="#tab-1">A la Une</a>
+                            </li>
+                            <li class="nav-item me-2">
+                                <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-2">A Vendre</a>
+                            </li>
+                            <li class="nav-item me-0">
+                                <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">A Louer</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            <div class="row g-4" id="productList">
+                                @foreach (var product in Model.produits)
+                                {
+                                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="property-item rounded overflow-hidden">
+                                            <div class="position-relative overflow-hidden">
+                                                <a asp-action="SingleProduct" asp-route-id="@product.id"><img class="img-fluid" src="data:image/jpeg;base64,@Convert.ToBase64String(product.images[0])" alt=""></a>
+                                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
+                                                    @(product.contrat == "sell" ? "A vendre" : "A Louer")
+                                                </div>
+                                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartement</div>
+                                            </div>
+                                            <div class="p-4 pb-0">
+                                                <h5 class="text-primary mb-3">$12,345</h5>
+                                                <a class="d-block h5 mb-2" asp-action="SingleProduct" asp-route-id="@product.id">@product.nom</a>
+                                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>@product.localisation</p>
+                                            </div>
+                                            <div class="d-flex border-top">
+                                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>@product.size Sqft</small>
+                                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            
+                            <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+                                <a class="btn btn-primary py-3 px-5" href="">Voir Plus de Proprietés</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="row g-4">
+                                @foreach (var product in Model.produits.Where(p => p.contrat == "sell"))
+                                {
+                                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="property-item rounded overflow-hidden">
+                                            <div class="position-relative overflow-hidden">
+                                                <a asp-action="SingleProduct" asp-route-id="@product.id"><img class="img-fluid" src="data:image/jpeg;base64,@Convert.ToBase64String(product.images[0])" alt=""></a>
+                                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">A Vendre</div>
+                                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartement</div>
+                                            </div>
+                                            <div class="p-4 pb-0">
+                                                <h5 class="text-primary mb-3">$12,345</h5>
+                                                <a class="d-block h5 mb-2" asp-action="SingleProduct" asp-route-id="@product.id">@product.nom</a>
+                                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>@product.localisation</p>
+                                            </div>
+                                            <div class="d-flex border-top">
+                                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>@product.size Sqft</small>
+                                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            <div class="col-12 text-center">
+                                <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="row g-4">
+                                @foreach (var product in Model.produits.Where(p => p.contrat == "rent"))
+                                {
+                                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="property-item rounded overflow-hidden">
+                                            <div class="position-relative overflow-hidden">
+                                                <a asp-action="SingleProduct" asp-route-id="@product.id"><img class="img-fluid" src="data:image/jpeg;base64,@Convert.ToBase64String(product.images[0])" alt=""></a>
+                                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">A Louer</div>
+                                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartement</div>
+                                            </div>
+                                            <div class="p-4 pb-0">
+                                                <h5 class="text-primary mb-3">$12,345</h5>
+                                                <a class="d-block h5 mb-2" asp-action="SingleProduct" asp-route-id="@product.id">@product.nom</a>
+                                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>@product.localisation</p>
+                                            </div>
+                                            <div class="d-flex border-top">
+                                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>@product.size Sqft</small>
+                                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            <div class="col-12 text-center">
+                                <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Property List End -->
+       
+            <!-- Call to Action Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="bg-light rounded p-3">
+                    <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                                <img class="img-fluid rounded w-100" src="/img/teamagent.jpg" alt="">
+                            </div>
+                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="mb-4">
+                                    <h1 class="mb-3">Entrez en Contact avec un de nos agents</h1>
+                                    <p>Transformez votre expérience immobilière en une aventure réussie en rencontrant nos agents dévoués. Que vous soyez
+                                    acheteur ou vendeur, nos professionnels expérimentés sont prêts à vous guider à chaque étape, transformant vos objectifs
+                                    en réalité. Rencontrez un agent aujourd'hui et ouvrez la porte vers une transaction immobilière réussie.</p>
+                                </div>
+                                <a href="/agents" class="btn btn-primary py-3 px-4 me-2"><i class="fa fa-phone-alt me-2"></i>En Contacter un</a>
+                                <a href="./rendezvous" class="btn btn-dark py-3 px-4"><i class="fa fa-calendar-alt me-2"></i>Prendre Rendez-vous</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Call to Action End -->
+
+
+         <!-- Team Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Agents Immobiliers</h1>
+                    <p>Rencontrez un de nos agents dès maintenant et donnez vie à vos projets immobiliers. Que vous achetiez ou
+                        vendiez, notre
+                        équipe est prête à faire de chaque transaction une expérience réussie.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/team-01.jpg" alt="">
+                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">Felicia Ngum</h5>
+                                <small>Agent Commerciale</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/team-02.jpg" alt="">
+                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">Paul Takoum</h5>
+                                <small>CEO</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/team-03.jpg" alt="">
+                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">Anne-Marie Nkoum </h5>
+                                <small>Agent Immobilier</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="team-item rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/team-04.jpg" alt="">
+                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">Jean-Pierre Mbeng</h5>
+                                <small>Agent Principal</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Ils Nous Ont Fait Confiance!</h1>
+                    <p>
+                        Découvrez ce que nos clients satisfaits ont à dire sur leur expérience. Les commentaires ci-dessous reflètent notre
+                        engagement envers un service exceptionnel et des transactions immobilières réussies.
+                    </p>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-item bg-light rounded p-3">
+                        <div class="bg-white border rounded p-4">
+                            <p>
+                                J'ai été impressionnée par la qualité des propriétés présentées par cette agence immobilière. Leur équipe a su comprendre mes besoins esthétiques, et j'ai trouvé la maison parfaite pour mon prochain
+                                projet.
+                            </p>
+                            <div class="d-flex align-items-center">
+                                <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px;">
+                                <div class="ps-3">
+                                    <h6 class="fw-bold mb-1">Sophie Dufresne</h6>
+                                    <small>Designer d'intérieur</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded p-3">
+                        <div class="bg-white border rounded p-4">
+                            <p>
+                                L'équipe m'a épatée par leur attention aux détails dans le processus d'achat. Leur compréhension approfondie du marché
+                                immobilier a rendu l'expérience sans stress.
+                            </p>
+                            <div class="d-flex align-items-center">
+                                <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                                <div class="ps-3">
+                                    <h6 class="fw-bold mb-1">Antoine Lefèvre</h6>
+                                    <small>Professionnel de la finance</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded p-3">
+                        <div class="bg-white border rounded p-4">
+                            <p>Cette agence a respecté mes délais serrés pour la location d'un appartement. Leur professionnalisme et leur réactivité ont été essentiels. Une expérience client exemplaire!</p>
+                            <div class="d-flex align-items-center">
+                                <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                                <div class="ps-3">
+                                    <h6 class="fw-bold mb-1">Pierre Talla</h6>
+                                    <small>Chef d'entreprise</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+        <!-- Footer Start -->
+        <partial name="Footer" />
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/wow/wow.min.js"></script>
+    <script src="~/lib/easing/easing.min.js"></script>
+    <script src="~/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="~/js/main.js"></script>
+    <script>
+        SetActiveNav("navIndex");
+    </script>
+    @*<script>
+        async function fetchProducts(){
+            const productList = document.getElementById("productList");
+            const response = await fetch('/Produits');
+            const products = await response.json();
+            products.forEach(product => {
+                for (let i = 0; i < 2; i++) {
+
+                }
+                var firstDiv = document.createElement('div');
+                firstDiv.classList.add("col-lg-4", "col-md-6", "wow", "fadeInUp");
+                firstDiv.dataset.wowDelay = "0.1s";
+                var secondDiv = document.createElement('div');
+                secondDiv.classList.add("property-item", "rounded", "overflow-hidden");
+                var thirdDiv = document.createElement('Div');
+                thirdDiv.classList.add("position-relative", "overflow-hidden");
+                var thirdDivFirstA = document.createElement("a");
+                thirdDivFirstA.href = "SingleProduct";
+                var thirdDivFirstAImage = document.createElement("img");
+                console.log(product.images[0]);
+                thirdDivFirstAImage.src = `data:image/jpeg;base64,${product.images[0]}`;
+                thirdDivFirstAImage.classList.add("img-fluid");
+                var thirdDivFirstDiv = document.createElement("div");
+                thirdDivFirstDiv.classList.add("bg-primary", "rounded", "text-white", "position-absolute", "start-0", "top-0", "m-4", "py-1", "px-3");
+                thirdDivFirstDiv.innerHTML = "A Vendre";
+                var thirdDivSecondDiv = document.createElement("div");
+                thirdDivSecondDiv.classList.add("bg-white", "rounded-top", "text-primary", "position-absolute", "start-0", "bottom-0", "mx-4", "pt-1", "px-3");
+                thirdDivSecondDiv.innerHTML = "Appartement";
+                thirdDivFirstA.appendChild(thirdDivFirstAImage);
+                thirdDiv.appendChild(thirdDivFirstA);
+                thirdDiv.appendChild(thirdDivFirstDiv);
+                thirdDiv.appendChild(thirdDivSecondDiv);
+
+                var fourthDiv = document.createElement('div');
+                fourthDiv.classList.add("p-4", "pb-0");
+
+                var fourthDivfirstH = document.createElement('h5');
+                fourthDivfirstH.classList.add("text-primary", "mb-3");
+                fourthDivfirstH.innerHTML = String(product.prix);
+                var fourthDivFirstA = document.createElement('a');
+                fourthDivFirstA.classList.add('d-block', 'h5', 'mb-2');
+                fourthDivFirstA.href = "SingleProduct";
+                fourthDivFirstA.innerText = String(product.nom);
+                var fourthDivFirstP = document.createElement('p');
+                var fourthDivFirstPFirstEl = document.createElement('i');
+                fourthDivFirstPFirstEl.classList.add("fa", "fa-map-marker-alt", "text-primary", "me-2");
+                fourthDivFirstP.appendChild(fourthDivFirstPFirstEl);
+                fourthDivFirstP.innerHTML += String(product.localisation);
+                fourthDiv.append(fourthDivfirstH);
+                fourthDiv.append(fourthDivFirstA);
+                fourthDiv.append(fourthDivFirstP);
+
+                var fifthDiv = document.createElement('div');
+                fifthDiv.classList.add("d-flex", "border-top");
+
+                var fifthDivFirstDivFirstEl = document.createElement('small');
+                fifthDivFirstDivFirstEl.classList.add("flex-fill", "text-center", "border-end", "py-2");
+                var fifthDivFirstDivFirstElFirsEL = document.createElement('i');
+                fifthDivFirstDivFirstElFirsEL.classList.add("fa", "fa-ruler-combined", "text-primary", "me-2");
+                fifthDivFirstDivFirstEl.appendChild(fifthDivFirstDivFirstElFirsEL);
+                fifthDivFirstDivFirstEl.innerHTML += String(product.size);
+
+                var fifthDivFirstDivSecondEl = document.createElement('small');
+                fifthDivFirstDivSecondEl.classList.add("flex-fill", "text-center", "border-end", "py-2");
+                var fifthDivFirstDivSecondElFirsEL = document.createElement('i');
+                fifthDivFirstDivSecondElFirsEL.classList.add("fa", "fa-bed", "text-primary", "me-2");
+                fifthDivFirstDivSecondEl.appendChild(fifthDivFirstDivSecondElFirsEL);
+                fifthDivFirstDivSecondEl.innerHTML += "3 Bed";
+
+                var fifthDivFirstDivThirdEl = document.createElement('small');
+                fifthDivFirstDivThirdEl.classList.add("flex-fill", "text-center", "border-end", "py-2");
+                var fifthDivFirstDivThirdElFirsEL = document.createElement('i');
+                fifthDivFirstDivThirdElFirsEL.classList.add("fa", "fa-bath", "text-primary", "me-2");
+                fifthDivFirstDivThirdEl.appendChild(fifthDivFirstDivThirdElFirsEL);
+                fifthDivFirstDivThirdEl.innerHTML += "2 Bath";
+
+                fifthDiv.appendChild(fifthDivFirstDivFirstEl);
+                fifthDiv.appendChild(fifthDivFirstDivSecondEl);
+                fifthDiv.appendChild(fifthDivFirstDivThirdEl);
+
+                fourthDiv.appendChild(fourthDivfirstH);
+
+                secondDiv.appendChild(thirdDiv);
+                secondDiv.appendChild(fourthDiv);
+                secondDiv.appendChild(fifthDiv);
+                firstDiv.appendChild(secondDiv);
+                productList.append(firstDiv);
+            });
+        }
+        window.onload = async function () {
+            await fetchProducts();
+        };
+        // </script>*@
+</body>
+
+</html>
+
+@* <script>
+        SetActiveNav("navIndex");
+    </script>
+    <script>
+        function byteArrayToDataURL(byteArray) {
+            const blob = new Blob([new Uint8Array(byteArray)], { type: 'image/jpeg' }); // Adjust the 'image/jpeg' based on your image type
+            return URL.createObjectURL(blob);
+        }
+        const productList = document.getElementById("productList");
+        fetch('/Produits')
+            .then(response => response.json())
+            .then(products => {
+                products.forEach(product => {
+                    var firstDiv = document.createElement('div');
+                    firstDiv.classList.add("col-lg-4", "col-md-6", "wow", "fadeInUp");
+                    firstDiv.dataset.wowDelay = "0.1s";
+                    var secondDiv = document.createElement('div');
+                    secondDiv.classList.add("property-item", "rounded", "overflow-hidden");
+                    var thirdDiv = document.createElement('Div');
+                    thirdDiv.classList.add("position-relative", "overflow-hidden");
+                    var thirdDivFirstA = document.createElement("a");
+                    thirdDivFirstA.href = "SingleProduct";
+                    var thirdDivFirstAImage = document.createElement("img");
+                    console.log(product.images[0]);
+                    thirdDivFirstAImage.src = `data:image/jpeg;base64,${product.images[0]}`;
+                    thirdDivFirstAImage.classList.add("img-fluid");
+                    var thirdDivFirstDiv = document.createElement("div");
+                    thirdDivFirstDiv.classList.add("bg-primary", "rounded", "text-white", "position-absolute", "start-0", "top-0", "m-4", "py-1", "px-3");
+                    thirdDivFirstDiv.innerHTML = "A Vendre";
+                    var thirdDivSecondDiv = document.createElement("div");
+                    thirdDivSecondDiv.classList.add("bg-white", "rounded-top", "text-primary", "position-absolute", "start-0", "bottom-0", "mx-4", "pt-1", "px-3");
+                    thirdDivSecondDiv.innerHTML = "Appartement";
+                    thirdDivFirstA.appendChild(thirdDivFirstAImage);
+                    thirdDiv.appendChild(thirdDivFirstA);
+                    thirdDiv.appendChild(thirdDivFirstDiv);
+                    thirdDiv.appendChild(thirdDivSecondDiv);
+
+                    var fourthDiv = document.createElement('div');
+                    fourthDiv.classList.add("p-4", "pb-0");
+
+                    var fourthDivfirstH = document.createElement('h5');
+                    fourthDivfirstH.classList.add("text-primary","mb-3");
+                    fourthDivfirstH.innerHTML = String(product.prix);
+                    var fourthDivFirstA = document.createElement('a');
+                    fourthDivFirstA.classList.add('d-block','h5','mb-2');
+                    fourthDivFirstA.href = "SingleProduct";
+                    fourthDivFirstA.innerText = String(product.nom);
+                    var fourthDivFirstP = document.createElement('p');
+                    var fourthDivFirstPFirstEl = document.createElement('i');
+                    fourthDivFirstPFirstEl.classList.add("fa","fa-map-marker-alt","text-primary","me-2");
+                    fourthDivFirstP.appendChild(fourthDivFirstPFirstEl);
+                    fourthDivFirstP.innerHTML += String(product.localisation);
+                    fourthDiv.append(fourthDivfirstH);
+                    fourthDiv.append(fourthDivFirstA);
+                    fourthDiv.append(fourthDivFirstP);
+
+                    var fifthDiv = document.createElement('div');
+                    fifthDiv.classList.add("d-flex","border-top");
+
+                    var fifthDivFirstDivFirstEl = document.createElement('small');
+                    fifthDivFirstDivFirstEl.classList.add("flex-fill", "text-center", "border-end", "py-2");
+                    var fifthDivFirstDivFirstElFirsEL = document.createElement('i');
+                    fifthDivFirstDivFirstElFirsEL.classList.add("fa", "fa-ruler-combined", "text-primary", "me-2");
+                    fifthDivFirstDivFirstEl.appendChild(fifthDivFirstDivFirstElFirsEL);
+                    fifthDivFirstDivFirstEl.innerHTML += String(product.size);
+
+                    var fifthDivFirstDivSecondEl = document.createElement('small');
+                    fifthDivFirstDivSecondEl.classList.add("flex-fill", "text-center", "border-end", "py-2");
+                    var fifthDivFirstDivSecondElFirsEL = document.createElement('i');
+                    fifthDivFirstDivSecondElFirsEL.classList.add("fa", "fa-bed", "text-primary", "me-2");
+                    fifthDivFirstDivSecondEl.appendChild(fifthDivFirstDivSecondElFirsEL);
+                    fifthDivFirstDivSecondEl.innerHTML += "3 Bed";
+
+                    var fifthDivFirstDivThirdEl = document.createElement('small');
+                    fifthDivFirstDivThirdEl.classList.add("flex-fill", "text-center", "border-end", "py-2");
+                    var fifthDivFirstDivThirdElFirsEL = document.createElement('i');
+                    fifthDivFirstDivThirdElFirsEL.classList.add("fa", "fa-bath", "text-primary", "me-2");
+                    fifthDivFirstDivThirdEl.appendChild(fifthDivFirstDivThirdElFirsEL);
+                    fifthDivFirstDivThirdEl.innerHTML += "2 Bath";
+
+                    fifthDiv.appendChild(fifthDivFirstDivFirstEl);
+                    fifthDiv.appendChild(fifthDivFirstDivSecondEl);
+                    fifthDiv.appendChild(fifthDivFirstDivThirdEl);
+
+                    fourthDiv.appendChild(fourthDivfirstH);
+
+                    secondDiv.appendChild(thirdDiv);
+                    secondDiv.appendChild(fourthDiv);
+                    secondDiv.appendChild(fifthDiv);
+                    firstDiv.appendChild(secondDiv);
+                    productList.append(firstDiv);
+                });
+            }).catch(error => console.error('Error fetching products:', error));
+    // </script> *@
